@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* 
+	선택자(selector)
+	1. 태그 선택자 : 태그명
+	2. id 선택자 : #아이디명
+	3. class 선택자 : .클래스명
+*/
+table {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+th, td {
+	border: 1px solid black;
+	padding: 5px;
+}
+
+.center {
+	text-align: center;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>[ 게시판 - 글 수정 ]</h2>
+	<form th:action="|/update/@{*{id}}|" method="post" th:object="${board}">
+		<table>
+			<tr>
+				<th>글번호</th>
+				<td th:text="*{id}"></td>
+			</tr>
+			<tr>
+				<th>제목</th>
+				<td><input type="text" th:field="*{title}"></td>
+			</tr>
+			<tr>
+				<th>내용</th>
+				<td><textarea rows="10" cols="30" th:field="*{content}"></textarea></td>
+			</tr>
+			<tr>
+				<th>작성자</th>
+				<td th:text="*{name}"></td>
+			</tr>
+			<tr>
+				<th>패스워드</th>
+				<td><input type="password" th:field="*{password}"></td>
+			</tr>
+			<tr>
+				<td colspan="2" class="center">
+				<input type="button" value="목록으로" onclick="location.href='/list'">
+				<input type="submit" value="수정하기">
+				<input type="reset" value="취소">
+				</td>
+			</tr>
+		</table>
+	</form>
+	
+</body>
+</html>
